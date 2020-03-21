@@ -1,4 +1,4 @@
-module ApplicationHelper
+#module ApplicationHelper
   class ApplicationHelper
     def current_user
      @current_user ||= User.find_by(id: session[:user_id])
@@ -8,4 +8,4 @@ module ApplicationHelper
       !current_user.nil?
     end
   end
-end
+#end
