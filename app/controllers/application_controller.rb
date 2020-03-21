@@ -1,9 +1,10 @@
-require ".helpers/ApplicationHelper"
+require "./app/helpers/ApplicationHelper"
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   add_flash_types :success, :info, :warning, :danger
   
+#  require ".helpers/ApplicationHelper"
   current_user
   logged_in?
   
