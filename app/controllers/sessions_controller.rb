@@ -31,13 +31,11 @@ class SessionsController < ApplicationController
   def session_params
     params.require(:session).permit(:email, :password)
   end
-　
-　
-　def login_check
+  
+  def login_check
   unless user_signed_in?
     flash[:alert] = "ログインしてください"
     redirect_to root_path
   end
-　
-　
+  
 end
