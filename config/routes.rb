@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'topics/new'
-  get 'sessions/new'
-  get 'users/new'
+
   root 'pages#index'
   get 'pages/help'
+  
+  get 'favorites/index'
+  post '/favorites', to: 'favorites#create'
   
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -14,7 +15,6 @@ Rails.application.routes.draw do
   resources :users
   resources :topics
   
-  get 'favorites/index'
-  post '/favorites', to: 'favorites#create'
+  #resources :favorites, only: [:index, :create, :destroy]
 
 end
