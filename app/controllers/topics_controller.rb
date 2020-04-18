@@ -1,12 +1,12 @@
 class TopicsController < ApplicationController
   
   def index
-    #@topics = Topic.all.includes(:favorite_users)
+    @topics = Topic.all.includes(:favorite_users)
     
     #追加
-    @topics = Topic.includes(:user).find(params[:id])
-    @comments = @topic.comments.includes(:user).all
-    @comment  = @topic.comments.build(user_id: current_user.id) if current_user
+    #@topics = Topic.includes(:user).find(params[:id])
+    #@comments = @topic.comments.includes(:user).all
+    #@comment  = @topic.comments.build(user_id: current_user.id) if current_user
     #追加
     
   end
