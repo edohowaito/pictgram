@@ -22,7 +22,7 @@
             <p class="topic-text">
               <%= topic.description %>
             </p>
-            <% @comments.each do |comment| %>
+            <% topic.comments.each do |comment| %>
               <div>
                 <strong><%= comment.user.user_name %></strong>
                 <br />
